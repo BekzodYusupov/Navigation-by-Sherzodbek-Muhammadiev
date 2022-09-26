@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.navigation_by_sherzodbek_muhammadiev_practice.screens.MainScreen"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_addScreen"
+            app:destination="@id/addScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/addScreen"
+        android:name="uz.gita.navigation_by_sherzodbek_muhammadiev_practice.screens.AddScreen"
+        android:label="AddScreen" >
+        <action
+            android:id="@+id/action_addScreen_to_aboutScreen"
+            app:destination="@id/aboutScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutScreen"
+        android:name="uz.gita.navigation_by_sherzodbek_muhammadiev_practice.screens.AboutScreen"
+        android:label="AboutScreen" />
+</navigation>
