@@ -17,11 +17,13 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var handler: Handler
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val fragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+
         handler.navigationStack
             .onEach {
                 it.invoke(fragment.findNavController())
